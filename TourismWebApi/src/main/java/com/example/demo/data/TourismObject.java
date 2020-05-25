@@ -1,8 +1,13 @@
 package com.example.demo.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Getter
+@Setter
 public class TourismObject implements EntityBase {
 
     public static final String SELECT_QUERY = "select * from " + Constants.SCHEMA_NAME + ".objects_data";
@@ -25,62 +30,6 @@ public class TourismObject implements EntityBase {
     private Region region;
     private Type type;
     private Subtype subtype;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Region getRegion() {
-        return region;
-    }
-
-    public void setRegion(Region region) {
-        this.region = region;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public void setType(Type type) {
-        this.type = type;
-    }
-
-    public Subtype getSubtype() {
-        return subtype;
-    }
-
-    public void setSubtype(Subtype subtype) {
-        this.subtype = subtype;
-    }
 
     @Override
     public String toString() {

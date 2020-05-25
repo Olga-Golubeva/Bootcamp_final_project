@@ -2,10 +2,12 @@ package com.example.demo.data;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Getter @Setter
 public class Region implements EntityBase {
     private static final String SELECT_QUERY = "select * from " + Constants.SCHEMA_NAME + ".region";
     ;
@@ -18,21 +20,6 @@ public class Region implements EntityBase {
     private int id;
     private String name;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public static Region createRegion(ResultSet rs) {
 
